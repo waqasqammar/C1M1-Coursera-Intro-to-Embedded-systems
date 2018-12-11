@@ -46,39 +46,88 @@ void main() {
   print_array(test, SIZE);
 
 }
+
 /* Add other Implementation File Code Here */
 
 /* Find the Mean of unsigned 8-bit Array. */
 float find_mean(unsigned char * ptr, unsigned int length){
 
+  float mean = 0;
+  unsigned int  sum = 0;
+  for(unsigned char idx = 0; idx < length; idx++) {
+
+     // sum += *((unsigned char * )(ptr + idx));
+     sum += ptr[idx];
+   }
+
+   mean = sum / length;
+
+   return mean;
 }
 
 /* Sort the Array in Descending Order */
 void sort_array(unsigned char * ptr, unsigned int length) {
-
+  unsigned char i, j, temp;
+  unsigned char swapped = 0;
+  for (i = 0; i < length - 1; i++) {
+    swapped = 0;
+    for (j = 0; j < length - i - 1; j++) {
+      if (ptr[j] < ptr[j + 1]) {
+        temp = ptr[j];
+        ptr[j] = ptr[j + 1];
+        ptr[j + 1] = temp;
+        swapped = 1;
+      }
+    }
+     // IF no two elements were swapped by inner loop, then break
+    if (swapped == 0)
+      break;
+  }
 }
 
 /* Prints the unsigned 8-bit Array on the Console. */
 void print_array(unsigned char * ptr, unsigned int length) {
-
+  printf("Array : \n");
+  for (unsigned char i = 0; i < length; i++)
+    printf("%d ", ptr[i]);
+  printf("\n");
 }
 
 /* Prints the Statistics of an unsigned 8-bit Array on the Console. */
 void print_statistics(unsigned char * ptr, unsigned int length) {
+
+  printf("Mean : %.4f \n", find_mean(ptr, length));
+  printf("Median : %.4f \n", find_median(ptr, length));
+  printf("Maximum : %u \n", find_maximum(ptr, length));
+  printf("Minimum : %u \n", find_minimum(ptr, length));
 
 }
 
 /*Find the Median of unsigned 8-bit Array. */
 float find_median(unsigned char * ptr, unsigned int length) {
 
+  // First we sort the array
+  sort_array(ptr, length);
+
+  // check for even case
+  if (length % 2 != 0)
+    return (float) ptr[length / 2];
+
+  return (float) (ptr[(length - 1) / 2] + ptr[length / 2]) / 2.0;
 }
 
 /* Find the Maximum value of unsigned 8-bit Array. */
 unsigned char find_maximum(unsigned char * ptr, unsigned int length) {
+  // First we sort the array
+  sort_array(ptr, length);
 
+  return ptr[0];
 }
 
 /* Find the Minimum of unsigned 8-bit Array. */
 unsigned char find_minimum(unsigned char * ptr, unsigned int length) {
+  // First we sort the array
+  sort_array(ptr, length);
 
+  return ptr[length - 1];
 }
