@@ -39,5 +39,46 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
+  print_array(test, SIZE);
+  print_statistics(test, SIZE);
+  sort_array(test, SIZE);
+  printf("Sorted ");
+  print_array(test, SIZE);
+
+}
+/* Add other Implementation File Code Here */
+
+/* Find the Mean of unsigned 8-bit Array. */
+float find_mean(unsigned char * ptr, unsigned int length){
+
+}
+
+/* Sort the Array in Descending Order */
+void sort_array(unsigned char * ptr, unsigned int length) {
+
+}
+
+/* Prints the unsigned 8-bit Array on the Console. */
+void print_array(unsigned char * ptr, unsigned int length) {
+
+}
+
+/* Prints the Statistics of an unsigned 8-bit Array on the Console. */
+void print_statistics(unsigned char * ptr, unsigned int length) {
+
+}
+
+/*Find the Median of unsigned 8-bit Array. */
+float find_median(unsigned char * ptr, unsigned int length) {
+
+}
+
+/* Find the Maximum value of unsigned 8-bit Array. */
+unsigned char find_maximum(unsigned char * ptr, unsigned int length) {
+
+}
+
+/* Find the Minimum of unsigned 8-bit Array. */
+unsigned char find_minimum(unsigned char * ptr, unsigned int length) {
 
 }

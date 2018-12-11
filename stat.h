@@ -38,5 +38,96 @@
  * @return <Add Return Informaiton here>
  */
 
+/**
+ * @brief Find the Mean of unsigned 8-bit Array.
+ *
+ * This function takes a pointer to an unsigned 8-bit array and the length of
+ * the array. It then calcultes its mean and returns a float.
+ *
+ * @param ptr A pointer to unsigned 8-bit array.
+ * @param length An unsigned int type as length of the array.
+ *
+ * @return The calculated mean of the given array.
+ */
+float find_mean(unsigned char * ptr, unsigned int length);
+
+/**
+ * @brief Sort the Array in Descending Order.
+ *
+ * This function takes a pointer to an unsigned 8-bit array and the length of
+ * the array. It then sort the array from largest to smallest element.
+ *
+ * @param ptr A pointer to unsigned 8-bit array.
+ * @param length An unsigned int type as length of the array.
+ *
+ * @return NONE
+ */
+void sort_array(unsigned char * ptr, unsigned int length);
+
+/**
+ * @brief Prints the unsigned 8-bit Array on the Console.
+ *
+ * This function takes a pointer to an unsigned 8-bit array and the length of
+ * the array. It then prints the elements of the array on Screen.
+ *
+ * @param ptr A pointer to unsigned 8-bit array.
+ * @param length An unsigned int type as length of the array.
+ *
+ * @return NONE
+ */
+void print_array(unsigned char * ptr, unsigned int length);
+
+/**
+ * @brief Prints the Statistics of an unsigned 8-bit Array on the Console.
+ *
+ * This function takes a pointer to an unsigned 8-bit array and the length of
+ * the array. It then finds out its Mean, Median, Maximum and Minimum elements
+ * and print them on the screen.
+ *
+ * @param ptr A pointer to unsigned 8-bit array.
+ * @param length An unsigned int type as length of the array.
+ *
+ * @return NONE
+ */
+void print_statistics(unsigned char * ptr, unsigned int length);
+
+/**
+ * @brief Find the Median of unsigned 8-bit Array.
+ *
+ * This function takes a pointer to an unsigned 8-bit array and the length of
+ * the array. It then finds out its Median and returns a float.
+ *
+ * @param ptr A pointer to unsigned 8-bit array.
+ * @param length An unsigned int type as length of the array.
+ *
+ * @return The Median of the given array.
+ */
+float find_median(unsigned char * ptr, unsigned int length);
+
+/**
+ * @brief Find the Maximum value of unsigned 8-bit Array.
+ *
+ * This function takes a pointer to an unsigned 8-bit array and the length of
+ * the array. It then finds out its Maximum valued element and returns it.
+ *
+ * @param ptr A pointer to unsigned 8-bit array.
+ * @param length An unsigned int type as length of the array.
+ *
+ * @return The Maximum value of the given array.
+ */
+unsigned char find_maximum(unsigned char * ptr, unsigned int length);
+
+/**
+ * @brief Find the Minimum of unsigned 8-bit Array.
+ *
+ * This function takes a pointer to an unsigned 8-bit array and the length of
+ * the array. It then findsout its Minimum value and returns it.
+ *
+ * @param ptr A pointer to unsigned 8-bit array.
+ * @param length An unsigned int type as length of the array.
+ *
+ * @return The Minimum value of the given array.
+ */
+unsigned char find_minimum(unsigned char * ptr, unsigned int length);
 
 #endif /* __STATS_H__ */
